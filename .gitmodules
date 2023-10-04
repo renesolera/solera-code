@@ -1,0 +1,3 @@
+[submodule "solar-repo"]
+	path = solar-repo
+	url = https://github.com/sushrutbapat/solar-repo
