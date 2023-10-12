@@ -1,0 +1,19 @@
+USE [soleradb]
+GO
+
+/****** Object:  Table [dbo].[enphase]    Script Date: 10/12/2023 4:35:13 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[enphase](
+	[Time] [datetime2](7) NOT NULL,
+	[power_produced] [int] NULL,
+	[battery_level] [int] NULL,
+	[power_produced_latest] [int] NULL
+) ON [PRIMARY]
+GO
+
+

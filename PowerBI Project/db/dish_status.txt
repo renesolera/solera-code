@@ -1,0 +1,20 @@
+USE [soleradb]
+GO
+
+/****** Object:  Table [dbo].[dish_status]    Script Date: 10/12/2023 4:34:30 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[dish_status](
+	[Time] [datetime2](7) NOT NULL,
+	[current_elevation_angle] [float] NULL,
+	[current_azimuth_angle] [float] NULL,
+	[sun_elevation_angle] [float] NULL,
+	[sun_azimuth_angle] [float] NULL
+) ON [PRIMARY]
+GO
+
+

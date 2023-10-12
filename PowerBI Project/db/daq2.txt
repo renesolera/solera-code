@@ -1,0 +1,24 @@
+USE [soleradb]
+GO
+
+/****** Object:  Table [dbo].[daq2]    Script Date: 10/12/2023 4:46:01 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[daq2](
+	[Time] [datetime2](7) NOT NULL,
+	[TC26_C] [float] NULL,
+	[TC32_C] [float] NULL,
+	[TC29_C] [float] NULL,
+	[TC35_C] [float] NULL,
+	[TC44_C] [float] NULL,
+	[TC34_C] [float] NULL,
+	[TC42_C] [float] NULL,
+	[TC33_C] [float] NULL
+) ON [PRIMARY]
+GO
+
+

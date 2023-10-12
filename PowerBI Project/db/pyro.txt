@@ -1,0 +1,17 @@
+USE [soleradb]
+GO
+
+/****** Object:  Table [dbo].[pyro]    Script Date: 10/12/2023 4:39:42 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[pyro](
+	[Time] [datetime2](7) NOT NULL,
+	[Data] [float] NULL
+) ON [PRIMARY]
+GO
+
+

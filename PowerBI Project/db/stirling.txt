@@ -1,0 +1,65 @@
+USE [soleradb]
+GO
+
+/****** Object:  Table [dbo].[stirling]    Script Date: 10/12/2023 4:44:56 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[stirling](
+	[Time] [datetime2](7) NOT NULL,
+	[Head_Temperature_Set_Point_C] [float] NOT NULL,
+	[Head_Control_Temperature_C] [float] NOT NULL,
+	[Head_Limit_Temperature_C] [float] NOT NULL,
+	[Coolant_Inlet_Temperature_C] [float] NOT NULL,
+	[Coolant_Outlet_Temperature_C] [float] NOT NULL,
+	[Back_End_Temperature_C] [float] NOT NULL,
+	[Ambient_Temperature_C] [float] NOT NULL,
+	[PCB_Temperature_C] [float] NOT NULL,
+	[Coolant_Flow_Rate_L_min] [float] NOT NULL,
+	[x_Axis_Vibration_Magnitude_g] [float] NOT NULL,
+	[y_Axis_Vibration_Magnitude_g] [float] NOT NULL,
+	[z_Axis_Vibration_Magnitude_g] [float] NOT NULL,
+	[Power_W] [float] NOT NULL,
+	[Voltage_V] [float] NOT NULL,
+	[Current_A] [float] NOT NULL,
+	[Frequency_Hz] [float] NOT NULL,
+	[Phase_Angle] [float] NOT NULL,
+	[Energy_Generated_kWh] [float] NOT NULL,
+	[Engine_Running] [int] NOT NULL,
+	[Engine_Demand] [int] NOT NULL,
+	[Heat_Source_Enabled] [int] NOT NULL,
+	[Heat_Source_Running] [int] NOT NULL,
+	[Automatic_Reset_Flag] [int] NOT NULL,
+	[User_Reset_Flag] [int] NOT NULL,
+	[Service_Reset_Flag] [int] NOT NULL,
+	[Integrity_Check_Signal] [int] NOT NULL,
+	[Control_State] [int] NOT NULL,
+	[Active_Error_Code] [int] NOT NULL,
+	[Automatic_Reset_Time_s] [float] NOT NULL,
+	[Fan_Set_Point_rpm] [float] NOT NULL,
+	[Fan_Speed_rpm] [float] NOT NULL,
+	[Fan_Drive] [float] NOT NULL,
+	[ECU_Software_ID] [nvarchar](50) NOT NULL,
+	[VI_Protection_Software_ID] [nvarchar](50) NOT NULL,
+	[Device_Operating_Time_h] [float] NOT NULL,
+	[Engine_Running_Time_h] [float] NOT NULL,
+	[Engine_Starts] [int] NOT NULL,
+	[Engine_Stops] [int] NOT NULL,
+	[Average_Site_Voltage_V] [float] NOT NULL,
+	[Average_Running_Voltage_V] [float] NOT NULL,
+	[External_Modulation_Signal] [float] NOT NULL,
+	[Heat_Input_Rate_s] [float] NOT NULL,
+	[Checksum_Fail_Count] [int] NOT NULL,
+	[Packet_Count] [int] NOT NULL,
+	[Comments] [nvarchar](max) NULL,
+ CONSTRAINT [PK_stirling] PRIMARY KEY CLUSTERED 
+(
+	[Time] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+
